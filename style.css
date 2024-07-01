@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+:root {
+  --Lime: hsl(61, 70%, 52%);
+  --Red: hsl(4, 69%, 50%);
+  --White: hsl(0, 0%, 100%);
+  --Slate-100: hsl(202, 86%, 94%);
+  --Slate-300: hsl(203, 41%, 72%);
+  --Slate-500: hsl(200, 26%, 54%);
+  --Slate-700: hsl(200, 24%, 40%);
+  --Slate-900: hsl(202, 55%, 16%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: var(--Slate-100);
+}
+
+h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 850px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--White);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.container form {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.container form .title-bloc {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.container form .title-bloc a {
+  color: var(--Slate-500);
+}
+
+form .form-main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form .form-main .form-input {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form .form-main .form-input label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--Slate-500);
+}
+
+form .form-main .form-input .input {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid var(--Slate-700);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.amount-text{
+    width: 17%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--Slate-700);
+    background-color: var(--Slate-100);
+  }
+
+form .form-main .form-input .input .input-text {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--Slate-700);
+  background-color: var(--Slate-100);
+}
+
+form .form-main .form-input .input input {
+  width: 90%;
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+
+.form-main .form-input:hover .input {
+  border: 2px solid var(--Lime);
+}
+
+.form-main .form-input:hover .input .input-text {
+  background-color: var(--Lime);
+  color: var(--Slate-900);
+  transition: all 0.4s ease;
+}
+
+.form-main .row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.error {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--Red);
+  max-height: 0;
+  visibility: hidden;
+}
+
+.form-main .form-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-main .form-footer .form-footer-text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--Slate-500);
+}
+
+.form-main .form-footer label {
+  display: flex;
+  align-items: center;
+  justify-self: start;
+  gap: 15px;
+  cursor: pointer;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--Slate-700);
+  height: 7vh;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.form-main .form-footer label:hover {
+  border: 2px solid var(--Lime);
+  outline: none;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.custom-radio {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--Slate-700);
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+input[type="radio"]:checked + .custom-radio {
+  border: 2px solid var(--Lime);
+}
+
+input[type="radio"]:checked + .custom-radio:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: var(--Lime);
+  border-radius: 50%;
+}
+
+.form-main .form-footer label span {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--Slate-900);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 15px;
+  background-color: var(--Lime);
+  border: none;
+  border-radius: 30px;
+}
+
+.container .right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding: 20px;
+  background-color: var(--Slate-900);
+  color: var(--White);
+}
+
+.container .right .results-start,
+.container .right .results-completed {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.container .right .results-start p,
+.container .right .results-completed p {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--Slate-300);
+}
+
+.container .right .results-completed {
+  background-color: var(--Slate-900);
+}
+
+.container .right .results-completed .result-infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Centering content */
+  gap: 20px;
+  border-radius: 10px;
+  border-top: 6px solid var(--Lime);
+  padding: 20px;
+  background-color: #12303f;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.container .right .results-completed .result-infos hr {
+  height: 1px;
+  background-color: hsla(202, 86%, 94%, 0.2);
+}
+
+.container .right .results-completed .result-infos .monthly-price {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--Lime);
+}
+
+.container .right .results-completed .result-infos .total-price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--White);
+}
+
+.attribution {
+  font-size: 0.8rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: black;
+  padding: 10px;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--Red);
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container .form-main .row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .container .form-main .row .form-input {
+    width: 100%;
+  }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Mortgage repayment calculator</title>
+</head>
+<body>
+  <div class="container">
+    <form action="" id="mortgage-form">
+      <div class="title-bloc">
+        <h1>Mortgage Calculator</h1>
+        <a href="#" id="clear-all">Clear All</a>
+      </div>
+      <div class="form-main">
+        <div class="form-input">
+          <label for="amount">Mortgage Amount</label>
+          <div class="input">
+            <div class="amount-text">£</div>
+            <input type="text" id="amount" placeholder="Amount">
+          </div>
+          <p class="error" id="error-amount">This field is required</p>
+        </div>
+        <div class="row">
+          <div class="form-input">
+            <label for="term">Mortgage Term</label>
+            <div class="input">
+              <input type="text" id="term" placeholder="Years">
+              <div class="input-text">years</div>
+            </div>
+            <p class="error" id="error-term">This field is required</p>
+          </div>
+          <div class="form-input">
+            <label for="rate">Interest Rate</label>
+            <div class="input">
+              <input type="text" id="rate" placeholder="Interest Rate">
+              <div class="input-text">%</div>
+            </div>
+            <p class="error" id="error-rate">This field is required</p>
+          </div>
+        </div>
+        <div class="form-footer">
+          <div class="form-footer-text">Mortgage Type</div>
+          <label>
+            <input type="radio" name="radio" class="radio-input" id="repay">
+            <span class="custom-radio"></span>
+            <span>Repayment</span>
+          </label>
+          <label>
+            <input type="radio" name="radio" class="radio-input" id="interestOnly">
+            <span class="custom-radio"></span>
+            <span>Interest Only</span>
+          </label>
+          <p class="error" id="error-type">This field is required</p>
+        </div>
+      </div>
+      <button type="submit" id="submitBtn">
+        <img src="./assets/images/icon-calculator.svg" alt="icon-calculator">
+        Calculate Repayments
+      </button>
+    </form>
+    <div class="right">
+      <div class="results-start">
+        <img src="./assets/images/illustration-empty.svg" alt="illustration-empty">
+        <h1>Results shown here</h1>
+        <p>Complete the form and click “calculate repayments” to see what your monthly repayments would be.</p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
